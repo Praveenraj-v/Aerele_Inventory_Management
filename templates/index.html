@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Inventory Management{% endblock %}
+{% block content %}
+<div class="row row-cols-1 row-cols-md-3 g-4 p-3">
+    <div class="col cardsMainClass">
+    <a href="{{ url_for('app.product', location='coimbatore') }}"><div class="card">
+        <img src="/static/uploads/coimbatore.jpg" class="card-img-top" alt="coimbatore">
+        <div class="card-body">
+          <h5 class="card-title">Gandhipuram Warehouse</h5>
+          <p class="card-text">This warehouse distributes to north of whole Tamil Nadu</p>
+        </div>
+      </div></a>
+    </div>
+    <div class="col cardsMainClass">
+      <a href="{{ url_for('app.product', location='chennai') }}"><div class="card">
+        <img src="/static/uploads/chennai.jpg" class="card-img-top" alt="chennai">
+        <div class="card-body">
+          <h5 class="card-title">Velachery Warehouse</h5>
+          <p class="card-text">This warehouse distributes to West of whole Tamil Nadu</p>
+        </div>
+      </div></a>
+    </div>
+    <div class="col cardsMainClass">
+    <a href="{{ url_for('app.product', location='thirunelveli') }}"><div class="card">
+        <img src="/static/uploads/thirunelveli.jpg" class="card-img-top" alt="thirunelveli">
+        <div class="card-body">
+          <h5 class="card-title">Thirunelveli Junction Warehouse</h5>
+          <p class="card-text">This warehouse distributes to South of whole Tamil Nadu</p>
+        </div>
+      </div></a>
+    </div>
+  </div>
+{% endblock %}

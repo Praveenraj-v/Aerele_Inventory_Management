@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- External Css Link -->
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- Bootstrap CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- Title of my Page -->
+    <title>{% block title %}{% endblock %}</title>
+
+</head>
+<body class="container-fluid">
+    <div class="baseStructClass">
+
+        <!-- NavBar of the page -->
+        <navbar>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid bg-navbar">
+                  <a class="navbar-brand" href="/"> 
+                    <img src="/static/uploads/Logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-center"> 
+                  </a>
+                  <button class="navbar-toggler" id="button-color" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon toggler-color"></span>
+                  </button>
+                  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav ">
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="/">Home</a>
+                      </li>
+                      <li class="nav-item d-flex align-items-center">
+                        <select class="border-0 bg-navbar text-white">
+                            <option class="nav-link">Locations</option>
+                            <option><a class="nav-link" href="/coimbatore">Coimbatore</a></option>
+                            <option><a class="nav-link" href="/chennai">Chennai</a></option>
+                            <option><a class="nav-link" href="/thirunelveli">Thirunelveli</a></option>
+                        </select>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </navbar>
+
+        <!-- Sidearea of the page -->
+        <aside>
+            <div class="d-flex justify-content-center">
+                <div class="card adminClass" style="width: 8rem;">
+                    <img src="/static/uploads/adminimg.png" class="card-img-top" alt="img">
+                    <div class="card-body">
+                      <h5 class="card-title">Admin</h5>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="w-100 d-flex justify-content-center">
+              <a href="{{ url_for('app.product_balance_report')}}" class="btn btn-danger m-3">Generate Report</a>
+              <a href="{{ url_for('app.product_movement_details')}}" class="btn btn-success m-3">Movement Details</a>
+          </div>
+        </aside>
+
+        <!-- Main content of the page -->
+        <main>{% block content %}{% endblock %}</main>
+
+        <!-- Footer of the page -->
+        <footer>
+            <div class="container">
+              <div class="footer-content row">
+                <!-- Footer logo or name -->
+                <div class="footer-logo col-2 d-flex align-items-center">
+                    <img src="/static/uploads/tasklogo.jpg" alt="Logo" width="100" height="100" class="d-inline-block align-text-center border border-white"> 
+                </div>
+                
+                <div class="col-10 p-2">
+                    <!-- Contact information -->
+                    <div class="contact-info text-end text-white lh-1">
+                      <p>Email: inventory@gmail.com</p>
+                      <p>Phone: +91-9360 790 855</p>
+                      <p>&copy; 2023 Your Company. All rights reserved.</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+    </div>
+
+
+    <!-- Scripts Link For Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+</body>
+</html>

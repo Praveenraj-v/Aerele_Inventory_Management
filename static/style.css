@@ -1,0 +1,57 @@
+.baseStructClass{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 3fr 0.5fr;
+    grid-template-areas: 
+        "navbar navbar navbar navbar"
+        "aside main main main"
+        "aside footer footer footer";
+    gap: 5px;
+}
+navbar{
+    grid-area: navbar;
+}
+.bg-navbar{
+    background-color: #032539;
+    padding: 0px;
+    margin: 0px;
+}
+.toggler-color{
+    background-color: #fa991c;
+}
+#button-color{
+    background-color: #fa991c;
+}
+aside{
+    background-color: #fa991c;
+    grid-area:aside;
+    .adminClass{
+        background-color: #fa991c;
+        border: none;
+        text-align: center;
+    }
+}
+
+main{
+    background-color: #fbf3f2;
+    grid-area:main;
+    .cardsMainClass a{
+        text-decoration: none;
+    }
+}
+footer{
+    background-color: #032539;
+    grid-area: footer;
+    height: fit-content;
+}
+
+.LogInBodyClass{
+    font-family: 'Dai Banna SIL', serif;
+    background-color:#032539;
+    height: 100vh;
+}
+.CardClass{
+    box-shadow: 12px 12px 5px black;
+    background-color: #fa991c;
+    color:#fbf3f2;
+}
